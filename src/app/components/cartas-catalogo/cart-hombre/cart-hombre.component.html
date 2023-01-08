@@ -1,0 +1,128 @@
+<div class="category-page">
+    <!-- Productos-->
+    <section class="products p-t-small">
+        <div class="container">
+            <header>
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6">
+                        <h1 class=" animated fadeIn t-stroke-shadow heading-line">Catálogo de hombre</h1>
+                    </div>
+                    <div class="col-md-6 filters d-flex justify-content-end">
+                        <app-filtro></app-filtro>
+                    </div>
+                </div>
+            </header>
+
+            <div class="my-5">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item text-center">
+                            <div class="card shadow-sm bg-image ">
+                                <img src="assets/img/generos/hombres/nike/PHANTOM GT2 ACADEMY DF TF_7.jpg"
+                                    class="img-fluid">
+                                <div class="card-body">
+                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
+                                            class="wishlist"><i class="fa fa-heart"></i></a>
+                                        <ul class="list-unstyled mb-0">
+                                            <button (click)="abrirmodal()" type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                data-toggle="modal" data-target="#modal1">Detalles</button>
+                                        </ul>
+                                    </div>
+                                    <div class="card-title">
+                                        <p class="generoproducto">Hombres</p>
+                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
+                                        <ul class="price list-inline">
+                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item text-center">
+                            <div class="card shadow-sm bg-image ">
+                                <img src="assets/img/generos/hombres/nike/Nike_React_Metcon_Turbo_2.jpg"
+                                    class="img-fluid">
+                                <div class="card-body">
+                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
+                                            class="wishlist"><i class="fa fa-heart"></i></a>
+                                        <ul class="list-unstyled mb-0">
+                                            <button (click)="abrirmodal()" type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                data-toggle="modal" data-target="#modal1">Detalles</button>
+                                        </ul>
+                                    </div>
+                                    <div class="card-title">
+                                        <p class="generoproducto">Hombres</p>
+                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
+
+                                        <ul class="price list-inline">
+                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item text-center">
+                            <div class="card shadow-sm bg-image ">
+                                <img src="assets/img/generos/hombres/nike/Nike Phantom GT Academy TF_6.jpg"
+                                    class="img-fluid">
+                                <div class="card-body">
+                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
+                                            class="wishlist"><i class="fa fa-heart"></i></a>
+                                        <ul class="list-unstyled mb-0">
+                                            <button (click)="abrirmodal()" type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                data-toggle="modal" data-target="#modal1">Detalles</button>
+                                        </ul>
+                                    </div>
+                                    <div class="card-title">
+                                        <p class="generoproducto">Hombres</p>
+                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
+                                        <ul class="price list-inline">
+                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item text-center">
+                            <div class="card shadow-sm bg-image ">
+                                <img src="assets/img/generos/hombres/nike/REACT LEGEND 9 PRO TF_3.jpg"
+                                    class="img-fluid">
+                                <div class="card-body">
+                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
+                                            class="wishlist"><i class="fa fa-heart"></i></a>
+                                        <ul class="list-unstyled mb-0">
+                                            <button (click)="abrirmodal()" type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                data-toggle="modal" data-target="#modal1">Detalles</button>
+                                        </ul>
+                                    </div>
+                                    <div class="card-title">
+                                        <p class="generoproducto">Hombres</p>
+                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
+                                        <ul class="price list-inline">
+                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-paginacion-catalogo></app-paginacion-catalogo>
+        </div>
+    </section>
+</div>
+
+<!--Logica de abrir modal de informacion del producto-->
+<div *ngIf="info_modal==true">
+    <app-info-modals></app-info-modals>
+</div>
