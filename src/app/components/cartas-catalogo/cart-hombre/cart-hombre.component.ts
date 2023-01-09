@@ -17,6 +17,7 @@ export class CartHombreComponent implements OnInit {
 
   abrirmodal(){
   this.info_modal = true;
+  
 }
 
 }
