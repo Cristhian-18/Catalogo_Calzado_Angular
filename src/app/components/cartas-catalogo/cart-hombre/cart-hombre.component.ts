@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServicioHombreService,hombres } from '../../../services/servicio_hombre/servicio-hombre.service';
 
 @Component({
   selector: 'app-cart-hombre',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartHombreComponent implements OnInit {
 
+  @Input() dataEntrante:any;
+
+  hombres:hombres[]=[];
   info_modal:boolean=false;
 
-  constructor() { }
+  constructor(private _serviciohombre:ServicioHombreService,private router:Router) { }
 
   ngOnInit(){
-    
+    this.hombres=this._serviciohombre.gethombres()
+  }
+
+  getNombres(nombre:string){
+    this.dataEntrante = nombre;
+    this._serviciohombre.disparadorDetalle.emit(this.dataEntrante)
   }
 
   abrirmodal(){

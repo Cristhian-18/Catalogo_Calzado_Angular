@@ -1,0 +1,40 @@
+<!--Formulario de registro de marcas-->
+<div class="btn-group p-4" role="group">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
+            class="fa-solid fa-square-up-right"></i> Insertar</button>
+</div>
+
+<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro de producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--Formulario para registrar : marcas--->
+            <div class="modal-body">
+                <form>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label alt="codigo">Nombre de la marca</label>
+                                <input class="form-control" id="exampleInputEmail1"
+                                    placeholder="Ingrese nombre de marca">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripción de la marca</label>
+                            <textarea class="form-control" rows="3" placeholder="Ingrese la descripcion"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success">Registrar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

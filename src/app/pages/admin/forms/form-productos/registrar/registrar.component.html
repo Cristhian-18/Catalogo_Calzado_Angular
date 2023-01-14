@@ -1,0 +1,137 @@
+<!--Formulario de registro de producto-->
+<div class="btn-group p-4" role="group">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
+            class="fa-solid fa-square-up-right"></i> Insertar</button>
+</div>
+
+<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro de producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <!--Formulario para registrar : producto--->
+            <div class="modal-body">
+                <form>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label alt="codigo">Código del producto</label>
+                                        <input class="form-control" id="exampleInputEmail1" placeholder="Codigo del producto">
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label alt="nombredelproducto">Nombre del producto</label>
+                                        <input class="form-control" id="exampleInputPassword1"
+                                            placeholder="Ingrese Nombre del producto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- textarea -->
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label >Modelo</label>
+                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el modelo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label >Marcas</label>
+                                        <select class="custom-select form-control-border" id="exampleSelectBorder">
+                                            <option>Nike</option>
+                                            <option>Adidas</option>
+                                            <option>Niño</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label >Tipo de persona</label>
+                                        <select class="custom-select form-control-border" id="exampleSelectBorder">
+                                            <option>Hombre</option>
+                                            <option>Mujer</option>
+                                            <option>Niño</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label >Talla</label>
+                                    <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese talla">
+                                </div>
+                            </div>
+                        </div>
+                
+                       
+                
+                        <div class="form-group">
+                            <label >Categoría</label>
+                            <select class="custom-select form-control-border" id="exampleSelectBorder">
+                                <option alt="cargarcategoria">Botines</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-group">
+                            <label>Descripción del producto</label>
+                            <textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label >Costo</label>
+                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el costo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label >Seleccionar</label>
+                            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                <input type="checkbox" class="custom-control-input" id="switchoferta">
+                                <label class="custom-control-label" for="switchoferta">Oferta</label>
+                            </div>
+                        </div>
+                                        
+                        <div class="form-group">
+                            <label >Cargar Imagen</label>
+                            <input class="form-control" id="exampleInputPassword1" placeholder="Cargar imagen">
+                        </div>
+                
+                    </div>
+                
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,26 +1,40 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//Componentes//
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+//Componentes de paginas del cliente//
 import { HomeComponent } from './pages/home/home.component';
-import { UltimasNovedadesComponent } from './pages/Catalogo/catalogo_landing/ultimas-novedades/ultimas-novedades.component';
-import { HombresComponent } from './pages/Catalogo/catalogo_landing/hombres/hombres.component';
+import { UltimasNovedadesComponent } from './pages/Catalogo/ultimas-novedades/ultimas-novedades.component';
+import { HombresComponent } from './pages/Catalogo/hombres/hombres.component';
+import { MujeresComponent } from './pages/Catalogo/mujeres/mujeres.component';
+import { NinosComponent } from './pages/Catalogo/ninos/ninos.component';
+
+//componentes de formularios de Administrador//
 import { AdminComponent } from './pages/admin/admin.component';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { MujeresComponent } from './pages/Catalogo/catalogo_landing/mujeres/mujeres.component';
+import { FormCategoriaComponent } from './pages/admin/forms/form-categoria/form-categoria.component';
+import { FormListarproductosComponent } from './pages/admin/forms/form-listarproductos/form-listarproductos.component';
+import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.component';
+import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
+import { FormInicioComponent } from './pages/admin/forms/form-inicio/form-inicio.component';
+
+
+
 
 const routes: Routes = [
-  {path:'navbar',component:NavbarComponent},
-  {path: 'home', component: HomeComponent},
-  {path:'footer',component:FooterComponent},
+  {path:'home', component: HomeComponent},
   {path:'ultimas_novedades', component:UltimasNovedadesComponent},
   {path:'hombres', component:HombresComponent},
   {path:'mujeres', component:MujeresComponent},
+  {path:'ninos', component:NinosComponent},
+  
+  //Administrador//
   {path:'admin', component:AdminComponent},
-  {path:'login', component:LoginComponent},
-  {path:'**',pathMatch:'full',redirectTo:'home'}
+  {path:'admin/form-inicio', component:FormInicioComponent},
+  {path:'admin/form-categoria', component:FormCategoriaComponent},
+  {path:'admin/form-listarproductos', component:FormListarproductosComponent},
+  {path:'admin/form-marca', component:FormMarcaComponent},
+  {path:'admin/form-productos', component:FormProductosComponent},
+
+  //{path:'**',pathMatch:'full',redirectTo:'admin'}
 ];
 
 @NgModule({

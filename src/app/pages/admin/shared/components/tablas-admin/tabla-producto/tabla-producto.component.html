@@ -1,0 +1,57 @@
+<div class="card ">
+    <div class="card-header">
+        <div class="card" alt="contenedor de carta">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Lista de zapatos o productos</h3>
+                </div>
+            </div>
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="container">
+                            <div class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-----Cuerpo de la tabla -->
+
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead alt="encabezados">
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre del producto</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>talla</th>
+                            <th>Costo</th>
+                            <th>Descripcion</th>
+                        </tr>
+                    </thead>
+                    <!-- Registros de productos -->
+                    <tbody alt="registros">
+                        <tr>
+                            <td alt="codigo">zap_01</td>
+                            <td alt="nombre">Nike For One</td>
+                            <td alt="marca">Nike</td>
+                            <td alt="modelo">ForOne09</td>
+                            <td alt="talla">37</td>
+                            <td alt="costo">$ 150</td>
+                            <td alt="descripcion">Zapatos de salir originales</td>
+                            <td>
+                                <app-modificar></app-modificar>
+                                <button class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

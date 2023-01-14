@@ -1,73 +1,52 @@
 <!--Detalles del producto-->
-<!-- Modal1-->
+<!-- Inicio de Modal-->
 <div class="modal" id="modal1">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Hipster Ultimate</h4>
+                <h4 class="modal-title" alt="nombreproducto">Cargar el nombre</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body"> <!-- Cuerpo del Modal-->
-                <div class="alert alert-danger">
-                    <span class="fa fa-info-circle"></span> Este Producto esta agotado!
+            <!-- Cuerpo del Modal-->
+            <div class="modal-body">
+                <div class="alert alert-success">
+                    <span class="fa fa-info-circle"></span> Producto en stock!
                 </div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg"
-                            alt="Camiseta 1" class="img-thumbnail">
+                            alt="imagenproducto" class="img-thumbnail">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                        <p>Precio: <strong>$299</strong></p>
-                        <p>Calificacion:
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="far fa-star"></span>
-                        </p>
+                        <p alt="precioproducto">Precio: <strong> cargar el precio </strong></p>
                         <p>
-                            <span class="badge badge-warning">Hipster</span>
-                            <span class="badge badge-secondary">Deportiva</span>
+                            <span class="badge badge-warning" alt="Categoria"> Cargar categoria </span>
+                            <span class="badge badge-secondary" alt="Marca"> cargar marca </span>
                         </p>
-                        <a href="#"><span class="fa fa-heart"></span> Agregar a los deseos</a>
+                        <a href="#"><i class="fa-regular fa-star"></i> Agregar a los deseos</a>
                     </div>
                 </div><br>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#description">Descripción</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#comentarios">Comentarios</a>
+                        <a class="nav-link active" data-toggle="tab"> Descripción </a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane container active" id="description"><br>
+                    <div class="tab-pane container active" alt="descripcionproducto"><br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. VItae
                             perferendis
                             nobis dicta impedit assumenda, accusantlum ipsa minima tempora sed!
                             Mollita,
                             nostrum, nisi. Culpa dolor ab tatom optio sapiente eius molllitia!</p>
                     </div>
-                    <div class="tab-pane container fade" id="comentarios"><br>
-                        <div class="card">
-                            <div class="card-header">Carlos Andres Perez comentó hace 1 día</div>
-                            <div class="card-body">
-                                Esta Bonita pero lastima que ya este agotada, cuando vuelve a sacar
-                                coleccion?
-                            </div>
-                        </div><br>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Ingresa tu comentario"></textarea>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- pie del modal-->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-primary">Comprar</button>
             </div>
-        </div> <!--Fin Modal content-->
+        </div> <!--Fin de contenido del Modal -->
     </div> <!--Fin Modal dialog-->
-</div> <!--Fin Modal fade-->
+</div> <!--Fin Modal-->

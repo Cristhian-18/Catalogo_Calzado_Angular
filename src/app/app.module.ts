@@ -9,16 +9,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HombresComponent } from './pages/Catalogo/catalogo_landing/hombres/hombres.component';
-import { MujeresComponent } from './pages/Catalogo/catalogo_landing/mujeres/mujeres.component';
-import { NinosComponent } from './pages/Catalogo/catalogo_landing/ninos/ninos.component';
+import { HombresComponent } from './pages/Catalogo/hombres/hombres.component';
+import { MujeresComponent } from './pages/Catalogo/mujeres/mujeres.component';
+import { NinosComponent } from './pages/Catalogo/ninos/ninos.component';
 import { CardComponent } from './components/card/card.component';
-import { UltimasNovedadesComponent } from './pages/Catalogo/catalogo_landing/ultimas-novedades/ultimas-novedades.component';
+import { UltimasNovedadesComponent } from './pages/Catalogo/ultimas-novedades/ultimas-novedades.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { LoginComponent } from './pages/auth/login/login.component';
 import { SeccMarcasComponent } from './components/secc-marcas/secc-marcas.component';
-import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { FiltroComponent } from './components/filtro/filtro.component';
 import { PaginacionCatalogoComponent } from './components/paginacion-catalogo/paginacion-catalogo.component';
 import { InfoModalsComponent } from './components/info-modals/info-modals.component';
@@ -26,6 +24,28 @@ import { NovedadesComponent } from './components/cartas-catalogo/novedades/noved
 import { CartHombreComponent } from './components/cartas-catalogo/cart-hombre/cart-hombre.component';
 import { CartMujeresComponent } from './components/cartas-catalogo/cart-mujeres/cart-mujeres.component';
 import { CartNinosComponent } from './components/cartas-catalogo/cart-ninos/cart-ninos.component';
+
+//servicios//
+import { ServicioHombreService } from './services/servicio_hombre/servicio-hombre.service';
+import { ServicioMujerService } from './services/servicio_mujer/servicio-mujer.service';
+import { ServicioUltimosmodelosService } from './services/servicio_ultimosmodelos/servicio-ultimosmodelos.service';
+
+
+
+import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.component';
+import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
+import { FormCategoriaComponent } from './pages/admin/forms/form-categoria/form-categoria.component';
+import { NavbarAdminComponent } from './pages/admin/shared/components/navbar-admin/navbar-admin.component';
+import { SidebarAdminComponent } from './pages/admin/shared/components/sidebar-admin/sidebar-admin.component';
+import { FormListarproductosComponent } from './pages/admin/forms/form-listarproductos/form-listarproductos.component';
+import { FormInicioComponent } from './pages/admin/forms/form-inicio/form-inicio.component';
+import { RegistrarComponent } from './pages/admin/forms/form-productos/registrar/registrar.component';
+import { ModificarComponent } from './pages/admin/forms/form-productos/modificar/modificar.component';
+import { TablaProductoComponent } from './pages/admin/shared/components/tablas-admin/tabla-producto/tabla-producto.component';
+import { RegistrarMarcaComponent } from './pages/admin/forms/form-marca/registrar-marca/registrar-marca.component';
+import { ModificarMarcaComponent } from './pages/admin/forms/form-marca/modificar-marca/modificar-marca.component';
+import { TablaMarcaComponent } from './pages/admin/shared/components/tablas-admin/tabla-marca/tabla-marca.component';
+
 
 
 
@@ -43,9 +63,7 @@ import { CartNinosComponent } from './components/cartas-catalogo/cart-ninos/cart
     UltimasNovedadesComponent,
     CarruselComponent,
     AdminComponent,
-    LoginComponent,
     SeccMarcasComponent,
-    QuienesSomosComponent,
     FiltroComponent,
     PaginacionCatalogoComponent,
     InfoModalsComponent,
@@ -53,13 +71,31 @@ import { CartNinosComponent } from './components/cartas-catalogo/cart-ninos/cart
     CartHombreComponent,
     CartMujeresComponent,
     CartNinosComponent,
+    FormMarcaComponent,
+    FormProductosComponent,
+    FormCategoriaComponent,
+    NavbarAdminComponent,
+    SidebarAdminComponent,
+    FormListarproductosComponent,
+    FormInicioComponent,
+    RegistrarComponent,
+    ModificarComponent,
+    TablaProductoComponent,
+    RegistrarMarcaComponent,
+    ModificarMarcaComponent,
+    TablaMarcaComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ServicioHombreService,
+    ServicioMujerService,
+    ServicioUltimosmodelosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
