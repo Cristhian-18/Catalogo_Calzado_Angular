@@ -49,7 +49,7 @@ export class TablaMarcaComponent implements OnInit {
     this.dataEntrante = id;
     console.log("ID: ",id);
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
-}
-
+  }
+  
   
 }
