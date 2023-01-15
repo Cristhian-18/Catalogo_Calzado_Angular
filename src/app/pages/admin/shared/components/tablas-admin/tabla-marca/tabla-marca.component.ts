@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConexMarcaService,Marca } from 'src/app/services/conexiones/conex-marca/conex-marca.service';
-import { ConexProductosService } from '../../../../../../services/conexiones/conex-productos/conex-productos.service';
+
 
 @Component({
   selector: 'app-tabla-marca',
@@ -10,12 +10,11 @@ import { ConexProductosService } from '../../../../../../services/conexiones/con
 export class TablaMarcaComponent implements OnInit {
 
   @Input() dataEntrante:any;
-
+  @Input() dataEntrante2:any;
   ListaMarca:Marca[]=[];
-  
+  index:number=0;
   
   constructor(private ConexProdcutoService:ConexMarcaService) { }
-
   ngOnInit(): void {
     this.listarMarcas();
   }
@@ -44,12 +43,18 @@ export class TablaMarcaComponent implements OnInit {
       
     );
   }
-
   getNombres(id:number){
     this.dataEntrante = id;
     console.log("ID: ",id);
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
+  } 
+  getIndex(id2:number){
+    this.index=id2;
+    this.dataEntrante2 = id2;
+    console.log("ID: ",id2);
+    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante2)
   }
-  
-  
+  enviar(){
+    this.getIndex(this.ListaMarca.length+1);
+  }
 }

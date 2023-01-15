@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConexProductosService {
+  @Output() disparadorDetalle: EventEmitter<any> = new EventEmitter();
 
   url='/producto';
   constructor(private http:HttpClient) { }

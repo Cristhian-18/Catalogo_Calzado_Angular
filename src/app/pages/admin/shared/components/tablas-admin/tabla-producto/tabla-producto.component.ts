@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input  } from '@angular/core';
 import { ConexProductosService,Producto} from 'src/app/services/conexiones/conex-productos/conex-productos.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { ConexProductosService,Producto} from 'src/app/services/conexiones/conex
 })
 export class TablaProductoComponent implements OnInit {
 
+  @Input() dataEntrante:any;
 
   ListaProducto:Producto[]=[];
 
@@ -32,4 +33,10 @@ export class TablaProductoComponent implements OnInit {
   );
 
   } 
+  getIndex(id:number){
+    this.dataEntrante = id;
+    console.log("ID: ",id);
+    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
+  }
+
 }
