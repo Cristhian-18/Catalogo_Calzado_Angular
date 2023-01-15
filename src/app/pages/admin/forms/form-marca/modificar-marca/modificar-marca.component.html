@@ -1,9 +1,10 @@
 <!--Formulario de modificacion de marcas-->
+<!--
 <div class="btn-group" role="group">
     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
-        <i class="fas fa-pencil-alt"></i> Modificar</button>
+        <i class="fas fa-pencil-alt" > </i> Modificar</button>
 </div>
-
+-->
 <div class="modal fade" id="modificar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -13,24 +14,27 @@
             </div>
             <!--Formulario para modificar : marcas--->
             <div class="modal-body">
-                <form>
-                    <div class="card-body">
+                <form *ngFor="let detalle of cargar" >
+                    <div class="card-body" >
                         <div class="form-group">
                             <div class="form-group">
                                 <label alt="codigo">Nombre de la marca</label>
-                                <input class="form-control" id="exampleInputEmail1"
-                                    placeholder="Ingrese nombre de marca">
+                                <!--
+                                <input [(ngModel)]="detalle.nombre" class="form-control" id="exampleInputEmail1"
+                                    placeholder="{{detalle.nombre}}" >
+                                 -->
+                                 <textarea [(ngModel)]="detalle.nombre" type="text" class="form-control" rows="1" placeholder="Ingrese el nombre" name="Nombre de la marca">{{detalle.nombre}}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Descripción de la marca</label>
-                            <textarea class="form-control" rows="3" placeholder="Ingrese la descripcion"></textarea>
+                            <label >Descripción de la marca</label>
+                            <textarea [(ngModel)]="detalle.descripcion" type="text" class="form-control" rows="3" placeholder="Ingrese la descripcion" name="Descripción de la marca">{{detalle.descripcion}}</textarea>
                         </div>
                     </div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Registrar</button>
+                        <button (click)="modificar(detalle.id_Marca,detalle.nombre,detalle.descripcion)" type="button" class="btn btn-success">Registrar</button>
                     </div>
 
                 </form>

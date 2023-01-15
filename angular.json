@@ -67,7 +67,8 @@
               "browserTarget": "Catalogo_Calzado:build:production"
             },
             "development": {
-              "browserTarget": "Catalogo_Calzado:build:development"
+              "browserTarget": "Catalogo_Calzado:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

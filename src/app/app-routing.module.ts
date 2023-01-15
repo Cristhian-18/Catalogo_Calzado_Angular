@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'admin/form-marca', component:FormMarcaComponent},
   {path:'admin/form-productos', component:FormProductosComponent},
 
-  //{path:'**',pathMatch:'full',redirectTo:'admin'}
+  {path:'**',pathMatch:'full',redirectTo:'home'}
 ];
 
 @NgModule({

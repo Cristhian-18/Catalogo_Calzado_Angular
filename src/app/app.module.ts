@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{FormsModule} from '@angular/forms';
 
 // Rutas //
 import { AppRoutingModule } from './app-routing.module';
@@ -29,8 +30,9 @@ import { CartNinosComponent } from './components/cartas-catalogo/cart-ninos/cart
 import { ServicioHombreService } from './services/servicio_hombre/servicio-hombre.service';
 import { ServicioMujerService } from './services/servicio_mujer/servicio-mujer.service';
 import { ServicioUltimosmodelosService } from './services/servicio_ultimosmodelos/servicio-ultimosmodelos.service';
-
-
+import { ConexMarcaService } from './services/conexiones/conex-marca/conex-marca.service';
+import { ConexProductosService } from './services/conexiones/conex-productos/conex-productos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.component';
 import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
@@ -89,12 +91,16 @@ import { TablaMarcaComponent } from './pages/admin/shared/components/tablas-admi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ServicioHombreService,
     ServicioMujerService,
-    ServicioUltimosmodelosService
+    ServicioUltimosmodelosService,
+    ConexMarcaService,
+    ConexProductosService
   ],
   bootstrap: [AppComponent]
 })

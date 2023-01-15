@@ -20,7 +20,7 @@
             </div>
 
             <!-----Cuerpo de la tabla -->
-            <div class="card-body">
+            <div class="card-body" >
                 <table class="table table-bordered table-hover">
                     <thead alt="encabezados">
                         <tr>
@@ -29,17 +29,22 @@
                             <th>Descripción</th>
                         </tr>
                     </thead>
-                    <tbody alt="registros">
+                    <tbody alt="registros" *ngFor="let ListaMarca of ListaMarca" >
                         <tr>
-                            <td alt="codigo">zap_01</td>
-                            <td alt="nombre de marca">Nike For One</td>
-                            <td alt="descripcion">Zapatos de salir originales</td>
+                            <td alt="codigo">{{ListaMarca.id_Marca}}</td>
+                            <td alt="nombre de marca">{{ListaMarca.nombre}}</td>
+                            <td alt="descripcion">{{ListaMarca.descripcion}}</td>
                             <td >
-                                <app-modificar-marca></app-modificar-marca>  
-                                <button class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</button>                     
+                                <div class="btn-group" role="group">
+                                    <button (click)="getNombres(ListaMarca.id_Marca)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
+                                        <i class="fas fa-pencil-alt" > </i> Modificar</button>
+                                </div>
+                                
+                                <button (click)="eliminar(ListaMarca.id_Marca)" class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>                     
                             </td>
                         </tr>
                     </tbody>
+                    <app-modificar-marca></app-modificar-marca>  
                 </table>
             </div>
         </div>

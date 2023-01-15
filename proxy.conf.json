@@ -1,0 +1,23 @@
+{
+    
+    "/administracion/*":{
+        "target":"http://34.173.102.139",
+        "secure":"false",
+        "logLevel":"debug"
+    },
+    "/marca/*":{
+        "target":"http://34.173.102.139",
+        "secure":"false",
+        "logLevel":"debug"
+    },
+    "/producto/*":{
+        "target":"http://34.173.102.139",
+        "secure":"false",
+        "logLevel":"debug"
+    }
+    
+    
+    
+}
+
+

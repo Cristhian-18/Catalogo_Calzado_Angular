@@ -9,20 +9,20 @@
 <div class="p-5">
     <div class="container" alt="cartas de novedades">
         <div class="row row-cols-2 row-cols-sm-4 row-cols-md-4 g-3 ">
-            <div class="col">
+            <div class="col" *ngFor="let ListaProducto of ListaProducto">
                 <div class="card shadow-sm bg-image">
                     <img
-                        src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fhombres%2Fnike%2FNike%20Mercurial%20Vapor%2014%20Club%20TF_4.jpg?alt=media&token=814a2a8c-6431-4483-b454-1ac9a7ad384c">
+                        src="{{ListaProducto.img}}">
                     <div class="card-body text-center">
                         <div class="onsale position-absolute top-0 start-0">
                             <span class="badge rounded-8"><i class="fa-solid fa-cart-plus"></i> Nuevo</span>
                         </div>
                         <div class="card-title">
-                            <p alt="genero">Hombres</p>
-                            <h4 alt="nombredelproducto">Nike</h4>
+                            <p alt="genero">{{ListaProducto.genero}}</p>
+                            <h4 alt="nombredelproducto">{{ListaProducto.nombre_producto}}</h4>
                         </div>
                         <ul class="price list-inline">
-                            <li class="list-inline-item"><span class="price"><span alt="precio">$ 150</span></span>
+                            <li class="list-inline-item"><span class="price"><span alt="precio">{{ListaProducto.costo}}</span></span>
                             </li>
                         </ul>
                         <div class="btn-group">
@@ -32,52 +32,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card shadow-sm bg-image">
-                    <img
-                        src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fhombres%2Fnike%2FNike%20Mercurial%20Vapor%2014%20Club%20TF_4.jpg?alt=media&token=814a2a8c-6431-4483-b454-1ac9a7ad384c">
-                    <div class="card-body text-center">
-                        <div class="onsale position-absolute top-0 start-0">
-                            <span class="badge rounded-8"><i class="fa-solid fa-cart-plus"></i> Nuevo</span>
-                        </div>
-                        <div class="card-title">
-                            <p alt="genero">Hombres</p>
-                            <h4 alt="nombredelproducto">Nike</h4>
-                        </div>
-                        <ul class="price list-inline">
-                            <li class="list-inline-item"><span class="price"><span alt="precio">$ 150</span></span>
-                            </li>
-                        </ul>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info">Detalles <i class="fa-solid fa-info">
-                                </i> </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm bg-image">
-                    <img
-                        src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fhombres%2Fnike%2FNike%20Mercurial%20Vapor%2014%20Club%20TF_4.jpg?alt=media&token=814a2a8c-6431-4483-b454-1ac9a7ad384c">
-                    <div class="card-body text-center">
-                        <div class="onsale position-absolute top-0 start-0">
-                            <span class="badge rounded-8"><i class="fa-solid fa-cart-plus"></i> Nuevo</span>
-                        </div>
-                        <div class="card-title">
-                            <p alt="genero">Hombres</p>
-                            <h4 alt="nombredelproducto">Nike</h4>
-                        </div>
-                        <ul class="price list-inline">
-                            <li class="list-inline-item"><span class="price"><span alt="precio">$ 150</span></span>
-                            </li>
-                        </ul>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info">Detalles <i class="fa-solid fa-info">
-                                </i> </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            
         </div>
     </div>
     <div>
