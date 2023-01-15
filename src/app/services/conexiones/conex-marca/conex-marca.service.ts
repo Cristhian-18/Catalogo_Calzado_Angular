@@ -14,8 +14,8 @@ export class ConexMarcaService {
     return this.http.get(this.url);
 };
  //get un Producto
- getUnmARCA(d_Marca:number){
-  return this.http.get(this.url+'/'+d_Marca)
+ getUnmARCA(id_Marca:number){
+  return this.http.get(this.url+'/'+id_Marca)
 };
 ///Agregar
 addMarca(marca:Marca){

@@ -33,6 +33,7 @@ import { ServicioUltimosmodelosService } from './services/servicio_ultimosmodelo
 import { ConexMarcaService } from './services/conexiones/conex-marca/conex-marca.service';
 import { ConexProductosService } from './services/conexiones/conex-productos/conex-productos.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ConexCategoriaService } from './services/conexiones/conex-categoria/conex-categoria.service';
 
 import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.component';
 import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
@@ -52,6 +53,7 @@ import { ModificarCategoriaComponent } from './pages/admin/forms/form-categoria/
 import { TablaCategoriaComponent } from './pages/admin/shared/components/tablas-admin/tabla-categoria/tabla-categoria.component';
 import { TablaUsuariosComponent } from './pages/admin/shared/components/tablas-admin/tabla-usuarios/tabla-usuarios.component';
 import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-usuarios.component';
+
 
 
 
@@ -110,7 +112,8 @@ import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-us
     ServicioMujerService,
     ServicioUltimosmodelosService,
     ConexMarcaService,
-    ConexProductosService
+    ConexProductosService,
+    ConexCategoriaService
   ],
   bootstrap: [AppComponent]
 })

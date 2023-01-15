@@ -30,12 +30,12 @@ export class ConexProductosService {
   };
 
   //eliminar
-  deleteusuario(id:number){
+  deletproducto(id:number){
     return this.http.delete(this.url+'/'+id);
 
   };
   //modificar
-  editUsuario(id:number, producto:Producto){
+  editproducto(id:number, producto:Producto){
     return this.http.put(this.url+'/'+id,producto);
 
   };
@@ -48,6 +48,7 @@ export interface Producto{
   nombre_producto:string; 
   descripcion:string; 
   fk_marca:string; 
+  modelo:string;
   genero:string; 
   talla:string; 
   costo:string;

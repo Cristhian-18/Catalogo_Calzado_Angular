@@ -28,7 +28,7 @@ export class ModificarMarcaComponent implements OnInit {
         },
         err => console.log('Hola')
        );
-      // console.log(this.detalle);
+  
      })
 
    }

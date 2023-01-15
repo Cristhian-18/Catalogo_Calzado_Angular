@@ -1,5 +1,5 @@
 <div class="btn-group p-4" role="group">
-    <button  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
+    <button (click)="enviar()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
             class="fa-solid fa-square-up-right"></i> Insertar</button>
 </div>
 
@@ -35,17 +35,17 @@
                         </tr>
                     </thead>
                     
-                    <tbody alt="registros"  >
+                    <tbody alt="registros" *ngFor="let ListaCategoria of ListaCategoria; let i= index"  >
                         <tr>
-                            <td alt="codigo"> cargar codigo </td>
-                            <td alt="nombre de categoria"> cargar nombre</td>
-                            <td alt="descripcion"> cargar descripcion</td>
+                            <td alt="codigo"> {{ListaCategoria.id_categoria}} </td>
+                            <td alt="nombre de categoria"> {{ListaCategoria.pk_nombre_cat}}</td>
+                            <td alt="descripcion"> {{ListaCategoria.descripcion}}</td>
                             <td >
                                 <div class="btn-group" role="group">
-                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
+                                    <button (click)="getNombres(ListaCategoria.pk_nombre_cat)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
                                         <i class="fas fa-pencil-alt" > </i> Modificar</button>
                                 </div>
-                                <button class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>                     
+                                <button (click)="eliminar(ListaCategoria.pk_nombre_cat)" class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>                     
                             </td>
                         </tr>                   
                     </tbody>

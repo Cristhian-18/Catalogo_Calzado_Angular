@@ -31,12 +31,30 @@ export class TablaProductoComponent implements OnInit {
     err => console.log(err)
     
   );
-
+  
   } 
+  /*
   getIndex(id:number){
     this.dataEntrante = id;
     console.log("ID: ",id);
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
   }
+  */
+  eliminar(id:number){
+    console.log(id);
+    this.ConexProdcutoService.deletproducto(id).subscribe(
+    res=>{
+      console.log('Usuario Eliminado');
+      this.listarProductos();
+    },
+    err => console.log(err)
+      
+    );
+  }
+  getNombres(id:number){
+    this.dataEntrante = id;
+    console.log("ID: ",id);
+    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
+  } 
 
 }

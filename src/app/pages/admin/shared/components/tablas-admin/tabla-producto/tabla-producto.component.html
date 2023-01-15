@@ -45,8 +45,13 @@
                             <td alt="costo">{{ListaProducto.costo}}</td>
                             <td alt="descripcion">{{ListaProducto.descripcion}}</td>
                             <td>
+                                <div class="btn-group">
+                                    <button (click)="getNombres(ListaProducto.pk_id_producto)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
+                                        <i class="fas fa-pencil-alt"></i> Modificar</button>
+                                </div>
+                                
                                 <app-modificar></app-modificar>
-                                <button class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</button>
+                                <button (click)="eliminar(ListaProducto.pk_id_producto)" class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>  
                             </td>
                         </tr>
                     </tbody>

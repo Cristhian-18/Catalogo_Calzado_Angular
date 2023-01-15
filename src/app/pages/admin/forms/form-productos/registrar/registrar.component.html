@@ -50,14 +50,14 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="form-group">
-                                    <div class="form-group">
+                                <div class="form-group" >
+                                    <div class="form-group" >
                                         <label >Marcas</label>
-                                        <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                            <option>Nike</option>
-                                            <option>Adidas</option>
-                                            <option>Niño</option>
+                                        <select class="custom-select form-control-border" id="exampleSelectBorder" >
+                                            <option *ngFor="let ListaMarca of ListaMarca" >{{ListaMarca.nombre}}</option>
+                                            
                                         </select>
+                                        
                                     </div>
                                 </div>
                             </div>

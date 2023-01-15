@@ -1,8 +1,4 @@
 <!--Formulario de modificacion de:  producto-->
-<div class="btn-group">
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
-        <i class="fas fa-pencil-alt"></i> Modificar</button>
-</div>
 
 <div class="modal fade" id="modificar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -13,7 +9,7 @@
             </div>
             <!--Formulario para modificar : producto--->
             <div class="modal-body">
-                <form>
+                <form *ngFor="let detalle of cargar" >
                     <!----Cuerpo de la carta--->
                     <div class="card-body">
                         <div class="row">
@@ -23,7 +19,10 @@
                                 <div class="form-group">                                    
                                     <div class="form-group">
                                         <label alt="codigo">Código del producto</label>
-                                        <input class="form-control" id="exampleInputEmail1" placeholder="Codigo del producto">
+                                        <textarea class="form-control" rows="1" placeholder="Código del producto">{{detalle.pk_id_producto}}</textarea>
+                                        <!--
+                                        <input [(ngModel)]="detalle.nombre" type="text" class="form-control" name="Código del producto" placeholder={{detalle.pk_id_producto}} > 
+                                        -->
                                     </div>
                                 </div>
                             </div>
@@ -33,8 +32,11 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label alt="nombredelproducto">Nombre del producto</label>
+                                        <textarea class="form-control" rows="1" placeholder="Nombre del producto">{{detalle.nombre_producto}}</textarea>
+                                         <!--
                                         <input class="form-control" id="exampleInputPassword1"
-                                            placeholder="Ingrese Nombre del producto">
+                                            placeholder={{detalle.nombre_producto}}>
+                                            -->
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +50,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Modelo</label>
-                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el modelo">
+                                        <textarea class="form-control" rows="1" placeholder="Modelo">{{detalle.modelo}}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -59,9 +61,7 @@
                                     <div class="form-group">
                                         <label >Marcas</label>
                                         <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                            <option>Nike</option>
-                                            <option>Adidas</option>
-                                            <option>Niño</option>
+                                            <option *ngFor="let ListaMarca of ListaMarca" >{{detalle.fk_marca}}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
                                 <div class="form-group">
                                      <!---Entrada de datos de la talla--->
                                     <label >Talla</label>                                   
-                                    <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese talla">
+                                    <textarea class="form-control" rows="1" placeholder="Modelo">{{detalle.talla}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -98,14 +98,14 @@
                         <div class="form-group">
                             <label >Categoría</label>
                             <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                <option alt="cargarcategoria">Botines</option>
+                                <option alt="cargarcategoria">{{detalle.fk_nombre_categoria}}</option>
                             </select>
                         </div>
                         
                         <!----Descripcion del producto o calzado---->
                         <div class="form-group">
                             <label>Descripción del producto</label>
-                            <textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Descripcion">{{detalle.descripcion}}</textarea>
                         </div>
                         
                         <!----Costo del producto---->
@@ -115,7 +115,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Costo</label>
-                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el costo">
+                                        <textarea class="form-control" rows="1" placeholder="Costo">{{detalle.costo}}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +133,8 @@
                         <!-----Cargar imagen desde FIREBASE---->
                         <div class="form-group">
                             <label >Cargar Imagen</label>
-                            <input class="form-control" id="exampleInputPassword1" placeholder="Cargar imagen">
+                            <textarea class="form-control" rows="1" placeholder="Cargar Imagen">{{detalle.img}}</textarea>
+                            
                         </div>               
                     </div> <!----Fin del cuerpo de la carta-->
                     
