@@ -14,11 +14,13 @@
             <!--Formulario para modificar : producto--->
             <div class="modal-body">
                 <form>
+                    <!----Cuerpo de la carta--->
                     <div class="card-body">
                         <div class="row">
+                            <!----Codigo del producto---->
                             <div class="col-sm-6">
                                 <!-- text input -->
-                                <div class="form-group">
+                                <div class="form-group">                                    
                                     <div class="form-group">
                                         <label alt="codigo">Código del producto</label>
                                         <input class="form-control" id="exampleInputEmail1" placeholder="Codigo del producto">
@@ -26,6 +28,7 @@
                                 </div>
                             </div>
                 
+                            <!----Nombre del producto--->
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-group">
@@ -37,7 +40,9 @@
                             </div>
                         </div>
                 
+                       
                         <div class="row">
+                             <!----Modelo del producto---->
                             <div class="col-sm-6">
                                 <!-- textarea -->
                                 <div class="form-group">
@@ -47,6 +52,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!---Marca del producto o calzado---->
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-group">
@@ -62,6 +69,8 @@
                         </div>
 
                         <div class="row">
+
+                            <!---Tipo de persona para el calzado---->
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-group">
@@ -74,31 +83,35 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!---Talla correspondiente para el calzado---->
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label >Talla</label>
+                                     <!---Entrada de datos de la talla--->
+                                    <label >Talla</label>                                   
                                     <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese talla">
                                 </div>
                             </div>
                         </div>
                 
-                       
-                
+                        <!----Categorias del calzado---->
                         <div class="form-group">
                             <label >Categoría</label>
                             <select class="custom-select form-control-border" id="exampleSelectBorder">
                                 <option alt="cargarcategoria">Botines</option>
                             </select>
                         </div>
-                
+                        
+                        <!----Descripcion del producto o calzado---->
                         <div class="form-group">
                             <label>Descripción del producto</label>
                             <textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
-                          </div>
-                
+                        </div>
+                        
+                        <!----Costo del producto---->
                         <div class="row">
                             <div class="col-sm-6">
-                                <!-- text input -->
+                                <!-- Entrada de texto del costo -->
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Costo</label>
@@ -107,6 +120,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!----Boton o check para ver si hay ofertas o no---->
                         <div class="form-group">
                             <label >Seleccionar</label>
                             <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
@@ -114,17 +129,18 @@
                                 <label class="custom-control-label" for="switchoferta">Oferta</label>
                             </div>
                         </div>
-                                        
+                        
+                        <!-----Cargar imagen desde FIREBASE---->
                         <div class="form-group">
                             <label >Cargar Imagen</label>
                             <input class="form-control" id="exampleInputPassword1" placeholder="Cargar imagen">
-                        </div>
-                
-                    </div>
-                
+                        </div>               
+                    </div> <!----Fin del cuerpo de la carta-->
+                    
+                    <!----Botones para interactuar-->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Registrar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Registrar</button>
                     </div>
                 </form>
             </div>
