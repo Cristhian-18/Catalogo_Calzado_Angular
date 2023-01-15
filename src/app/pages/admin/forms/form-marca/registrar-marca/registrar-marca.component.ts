@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ConexMarcaService,Marca } from 'src/app/services/conexiones/conex-marca/conex-marca.service';
 
 
@@ -8,6 +9,7 @@ import { ConexMarcaService,Marca } from 'src/app/services/conexiones/conex-marca
   styleUrls: ['./registrar-marca.component.css']
 })
 export class RegistrarMarcaComponent implements OnInit {
+
 
   detalle:any={};
 

@@ -1,5 +1,5 @@
 <div class="btn-group p-4" role="group">
-    <button (click)="enviar()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
+    <button  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
             class="fa-solid fa-square-up-right"></i> Insertar</button>
 </div>
 
@@ -8,7 +8,7 @@
         <div class="card" alt="contenedor de carta">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Lista de marcas</h3>
+                    <h3 class="card-title">Lista de Categorias</h3>
                 </div>
             </div>
             <div class="card-header">
@@ -25,33 +25,32 @@
             </div>
 
             <!-----Cuerpo de la tabla -->
-            <div class="card-body">
+            <div class="card-body" >
                 <table class="table table-bordered table-hover">
                     <thead alt="encabezados">
                         <tr>
                             <th>Código</th>
-                            <th>Nombre de marca</th>
+                            <th>Nombre de categoría</th>
                             <th>Descripción</th>
                         </tr>
                     </thead>
-                    <tbody alt="registros" *ngFor="let ListaMarca of ListaMarca; let i= index">
+                    
+                    <tbody alt="registros"  >
                         <tr>
-                            <td alt="codigo">{{ListaMarca.id_Marca}}</td>
-                            <td alt="nombre de marca">{{ListaMarca.nombre}}</td>
-                            <td alt="descripcion">{{ListaMarca.descripcion}}</td>
-                            <td>
+                            <td alt="codigo"> cargar codigo </td>
+                            <td alt="nombre de categoria"> cargar nombre</td>
+                            <td alt="descripcion"> cargar descripcion</td>
+                            <td >
                                 <div class="btn-group" role="group">
-                                    <button (click)="getNombres(ListaMarca.id_Marca)" class="btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#modificar">
-                                        <i class="fas fa-pencil-alt"> </i> Modificar</button>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
+                                        <i class="fas fa-pencil-alt" > </i> Modificar</button>
                                 </div>
-                                <button (click)="eliminar(ListaMarca.id_Marca)" class="btn btn-danger"><i
-                                        class="fas fa-trash"></i> Eliminar</button>
+                                <button class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>                     
                             </td>
-                        </tr>
+                        </tr>                   
                     </tbody>
-                    <app-modificar-marca></app-modificar-marca>
-                </table>
+                    <app-modificar-categoria></app-modificar-categoria>  
+                </table>               
             </div>
         </div>
     </div>

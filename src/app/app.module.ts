@@ -47,6 +47,11 @@ import { TablaProductoComponent } from './pages/admin/shared/components/tablas-a
 import { RegistrarMarcaComponent } from './pages/admin/forms/form-marca/registrar-marca/registrar-marca.component';
 import { ModificarMarcaComponent } from './pages/admin/forms/form-marca/modificar-marca/modificar-marca.component';
 import { TablaMarcaComponent } from './pages/admin/shared/components/tablas-admin/tabla-marca/tabla-marca.component';
+import { RegistrarCategoriaComponent } from './pages/admin/forms/form-categoria/registrar-categoria/registrar-categoria.component';
+import { ModificarCategoriaComponent } from './pages/admin/forms/form-categoria/modificar-categoria/modificar-categoria.component';
+import { TablaCategoriaComponent } from './pages/admin/shared/components/tablas-admin/tabla-categoria/tabla-categoria.component';
+import { TablaUsuariosComponent } from './pages/admin/shared/components/tablas-admin/tabla-usuarios/tabla-usuarios.component';
+import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-usuarios.component';
 
 
 
@@ -86,6 +91,11 @@ import { TablaMarcaComponent } from './pages/admin/shared/components/tablas-admi
     RegistrarMarcaComponent,
     ModificarMarcaComponent,
     TablaMarcaComponent,
+    RegistrarCategoriaComponent,
+    ModificarCategoriaComponent,
+    TablaCategoriaComponent,
+    TablaUsuariosComponent,
+    FormUsuariosComponent,
 
 
   ],
