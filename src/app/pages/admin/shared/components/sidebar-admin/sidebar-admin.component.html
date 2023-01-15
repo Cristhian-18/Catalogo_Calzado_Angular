@@ -1,85 +1,53 @@
-<!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div  class="image">
-                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2Frecursos%2Flogos%2Fuser.png?alt=media&token=a20d1d60-05d1-4b5f-917d-29bfe974fa4f"
-                    class="img-circle elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-                <a class="d-block"> Cargar Nombre Admin</a>
-            </div>
-        </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                    </button>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none ">
+                    <span class="fs-2 d-none d-sm-inline ">Administrador</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span> </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['../form-marca']" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Marcas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['../form-categoria']" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Categorias</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['../form-productos']" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Productos</span></a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1">Usuario</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item">
-                    <a [routerLink]="['../form-inicio']" class="nav-link active">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Inicio</p>
-                    </a>
-                </li>
-                <!--Formularios-->
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="fa-solid fa-people-roof"></i>
-                        <p> Administrar
-                            <i class="fa-solid fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul [routerLink]="['../form-productos']" class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa-solid fa-shop"></i>
-                                <p class="p-1"> Productos</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul [routerLink]="['../form-marca']" class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa-solid fa-bookmark"></i>
-                                <p class="p-1"> Marcas</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul [routerLink]="['../form-categoria']" class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fa-solid fa-star"></i>
-                                <p class="p-1"> Categorias</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="fa-solid fa-people-roof"></i>
-                        <p> Usuarios
-                            <i class="fa-solid fa-angle-left right"></i>
-                        </p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
+        <div class="col py-3">
+            <ng-content></ng-content>
+        </div>
     </div>
-    <!-- /.sidebar -->
-</aside>
-
+</div>

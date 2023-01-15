@@ -14,7 +14,6 @@ export class ConexCategoriaService {
     return this.http.get(this.url);
   };
 
-
   //get un Producto
   getUnCategoria(id:string){
     return this.http.get(this.url+'/'+id)
