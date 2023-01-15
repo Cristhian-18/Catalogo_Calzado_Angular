@@ -15,7 +15,7 @@ export class NovedadesComponent implements OnInit {
   ngOnInit(): void {
     this.listarProductos();
   }
-  listarProductos()
+listarProductos()
 {
   console.log("Servicio ULTIMA NOVEDAD");
   this.canexproduc.getProdcuto().subscribe(
