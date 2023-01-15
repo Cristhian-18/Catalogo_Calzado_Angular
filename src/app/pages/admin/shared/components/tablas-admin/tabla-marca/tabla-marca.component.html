@@ -1,3 +1,8 @@
+<div class="btn-group p-4" role="group">
+    <button (click)="enviar()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
+            class="fa-solid fa-square-up-right"></i> Insertar</button>
+</div>
+
 <div class="card ">
     <div class="card-header">
         <div class="card" alt="contenedor de carta">
@@ -29,7 +34,7 @@
                             <th>Descripción</th>
                         </tr>
                     </thead>
-                    <tbody alt="registros" *ngFor="let ListaMarca of ListaMarca" >
+                    <tbody alt="registros"  *ngFor="let ListaMarca of ListaMarca; let i= index" >
                         <tr>
                             <td alt="codigo">{{ListaMarca.id_Marca}}</td>
                             <td alt="nombre de marca">{{ListaMarca.nombre}}</td>
@@ -39,13 +44,13 @@
                                     <button (click)="getNombres(ListaMarca.id_Marca)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modificar">
                                         <i class="fas fa-pencil-alt" > </i> Modificar</button>
                                 </div>
-                                
                                 <button (click)="eliminar(ListaMarca.id_Marca)" class="btn btn-danger"><i class="fas fa-trash" ></i> Eliminar</button>                     
                             </td>
-                        </tr>
+                        </tr>                   
                     </tbody>
                     <app-modificar-marca></app-modificar-marca>  
                 </table>
+                
             </div>
         </div>
     </div>

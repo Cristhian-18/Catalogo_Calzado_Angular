@@ -9,6 +9,7 @@ import { ConexMarcaService,Marca } from 'src/app/services/conexiones/conex-marca
 })
 export class RegistrarMarcaComponent implements OnInit {
 
+  detalle:any={};
 
   marca:Marca={
       id_Marca:0,
@@ -19,19 +20,17 @@ export class RegistrarMarcaComponent implements OnInit {
   id:number=0;
   constructor( private conexion:ConexMarcaService) {     
     this.ListaMarca =<any>  conexion.getMarcas();    
+
+    this.conexion.disparadorDetalle.subscribe(data=>{
+        this.detalle = data;
+    })
   }
   ngOnInit(): void {
   }
   
   agregarProducto(){
-  
-    
-    this.marca.id_Marca = (this.id+1)
+    this.marca.id_Marca = (this.detalle)
     console.log(this.marca);
-    this.conexion.addMarca(this.marca).subscribe();
-    
-  
+    this.conexion.addMarca(this.marca).subscribe();  
   }
-
-
 }
