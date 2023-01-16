@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServicioHombreService,hombres } from '../../../services/servicio_hombre/servicio-hombre.service';
 import { ConexProductosService,Producto } from 'src/app/services/conexiones/conex-productos/conex-productos.service';
 
 @Component({
@@ -12,21 +11,21 @@ export class CartHombreComponent implements OnInit {
 
   @Input() dataEntrante:any;
 
-  hombres:hombres[]=[];
   info_modal:boolean=false;
 
   ListaProducto:Producto[]=[];
 
-  constructor(private _serviciohombre:ServicioHombreService,private router:Router,private canexproduc:ConexProductosService) { }
+  constructor(private canexproduc:ConexProductosService) { }
 
   ngOnInit(){
-    this.hombres=this._serviciohombre.gethombres()
+   
     this.listarProductos();
   }
 
-  getNombres(nombre:string){
+  getNombres(nombre:number){
     this.dataEntrante = nombre;
-    this._serviciohombre.disparadorDetalle.emit(this.dataEntrante)
+    console.log(this.dataEntrante);
+    this.canexproduc.disparadorDetalle.emit(this.dataEntrante)
   }
 
   listarProductos()
