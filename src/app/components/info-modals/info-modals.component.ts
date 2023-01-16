@@ -7,7 +7,7 @@ import { ConexProductosService,Producto } from 'src/app/services/conexiones/cone
 })
 export class InfoModalsComponent implements OnInit {
 
-  cargar:any={
+  cargar:any={  
     
     pk_id_producto:0,
     codigo_producto:'', 
@@ -21,9 +21,7 @@ export class InfoModalsComponent implements OnInit {
     costo:'',
     oferta:'',
     fk_nombre_categoria:''
-  
-  
-};
+  };
 
   constructor(private ConexProdcutoService:ConexProductosService) { 
 
@@ -35,13 +33,9 @@ export class InfoModalsComponent implements OnInit {
        },
        err => console.log(this.cargar)
       );
- 
     })
-
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {   
   }
-
 }
