@@ -1,10 +1,10 @@
 p{
-    font-size: 20px;   
+    font-size: 15px;   
 }
 .card{
     transition: all 0.3s;
 }
 
 .card:hover{
-    transform: scale(1.07);
+    transform: scale(1.02);
 }

@@ -1,39 +1,52 @@
-<!------------------------------------------------------
------------------------Titulo --------------------------
--------------------------------------------------------->
 <div class="bg-2 p-5">
     <h1 class=" animated fadeIn t-stroke-shadow fs-1 fw-bolder text-center">Ultimas novedades de ASTROSHOES</h1>
 </div>
 
-<!-- SECCION DE CARTA PARA LOS PRODUCTOS DE ULTIMAS NOVEDADES-->
-<div class="p-5">
-    <div class="container" alt="cartas de novedades">
-        <div class="row row-cols-2 row-cols-sm-4 row-cols-md-4 g-3 ">
-            <div class="col" *ngFor="let ListaProducto of ListaProducto">
-                <div class="card shadow-sm bg-image">
-                    <img
-                        src="{{ListaProducto.img}}">
-                    <div class="card-body text-center">
-                        <div class="onsale position-absolute top-0 start-0">
-                            <span class="badge rounded-8"><i class="fa-solid fa-cart-plus"></i> Nuevo</span>
-                        </div>
-                        <div class="card-title">
-                            <p alt="genero">{{ListaProducto.genero}}</p>
-                            <h4 alt="nombredelproducto">{{ListaProducto.nombre_producto}}</h4>
-                        </div>
-                        <ul class="price list-inline">
-                            <li class="list-inline-item"><span class="price"><span alt="precio">{{ListaProducto.costo}}</span></span>
-                            </li>
-                        </ul>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-info">Detalles <i class="fa-solid fa-info">
-                                </i> </button>
+<!------------------------------------------------------
+-----------------------Titulo --------------------------
+-------------------------------------------------------->
+<div class="category-page">
+    <!-- Productos de hombres-->
+    <section class="products p-t-small">
+        <div class="container">
+            <div class="my-5">
+                <div class="row">
+                    <div *ngFor="let ListaProducto of ListaProducto" class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item text-center">
+                            <div class="card shadow-sm bg-image">
+                                <img src="{{ListaProducto.img}}" class="img-fluid">
+                                <div class="card-body">
+                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
+                                            class="wishlist"><i class="fa fa-heart"></i></a>
+                                        <ul class="list-unstyled mb-0">
+                                            <button (click)="abrirmodal()" type="button"
+                                                class="btn btn-primary btn-lg px-4 mb-2" data-toggle="modal"
+                                                data-target="#modal1">Detalles</button>
+                                        </ul>
+                                    </div>
+                                    <div class="onsale position-absolute top-0 start-0">
+                                        <span class="badge rounded-8"><i class="fa-solid fa-cart-plus"></i> Nuevo</span>
+                                    </div>
+                                    <div class="card-title">
+                                        <p class="generoproducto">{{ListaProducto.genero}}</p>
+                                        <h4 class="nombreproducto">{{ListaProducto.nombre_producto}}</h4>
+                                        <ul class="price list-inline">
+                                            <li class="list-inline-item"> <span
+                                                    class="price">${{ListaProducto.costo}}</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
+            <app-paginacion-catalogo></app-paginacion-catalogo>
         </div>
-    </div>
-    <div>
+    </section>
+</div>
+
+<!--Logica de abrir modal de informacion del producto-->
+<div *ngIf="info_modal==true">
+    <app-info-modals></app-info-modals>
+</div>

@@ -7,7 +7,7 @@ import { ConexProductosService,Producto } from 'src/app/services/conexiones/cone
 })
 export class NovedadesComponent implements OnInit {
 
-
+  info_modal:boolean=false;
   ListaProducto:Producto[]=[];
 
   constructor(private canexproduc:ConexProductosService) { }
@@ -24,12 +24,11 @@ listarProductos()
       this.ListaProducto=<any>res;
            
     },
-    err => console.log(err)
-    
+    err => console.log(err) 
   );
-
-  
 }
 
-
+abrirmodal(){
+  this.info_modal = true;
+}
 }
