@@ -111,7 +111,7 @@
                         <div class="form-group">
                             <label >Seleccionar</label>
                             <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                                <input type="checkbox" class="custom-control-input" id="switchoferta">
+                                <input #checkbox type="checkbox" class="custom-control-input" id="switchoferta" (change)="obtenerOferta(checkbox.checked)">
                                 <label class="custom-control-label" for="switchoferta">Oferta</label>
                             </div>
                         </div>

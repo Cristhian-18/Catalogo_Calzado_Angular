@@ -84,9 +84,20 @@ export class RegistrarComponent implements OnInit {
   }
   obtenercGenero(valor: string) {
     this.Producto.genero = valor;
-    this.Producto.oferta = 'Oferta';
+    
     console.log(valor);
   }
+  
+  obtenerOferta(valor: boolean) {
+    if(valor == true){
+      this.Producto.oferta = 'Oferta';
+      console.log('Oferta');
+    }else{
+      this.Producto.oferta = 'No Oferta';
+      console.log('No Oferta');
+    }
+  }
+
 
   agregarProducto(){
     this.Producto.pk_id_producto = (this.detalle)
