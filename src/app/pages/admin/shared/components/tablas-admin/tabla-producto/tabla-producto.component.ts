@@ -9,9 +9,10 @@ import { ConexProductosService,Producto} from 'src/app/services/conexiones/conex
 export class TablaProductoComponent implements OnInit {
 
   @Input() dataEntrante:any;
+  @Input() dataEntrante2:any;
 
   ListaProducto:Producto[]=[];
-
+  index:number=0;
   constructor(private ConexProdcutoService:ConexProductosService) { }
 
   ngOnInit(): void {
@@ -56,5 +57,14 @@ export class TablaProductoComponent implements OnInit {
     console.log("ID: ",id);
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
   } 
+  getIndex(id2:number){
+    this.index=id2;
+    this.dataEntrante2 = id2;
+    console.log("ID: ",id2);
+    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante2)
+  }
+  enviar(){
+    this.getIndex(this.ListaProducto.length+1);
+  }
 
 }

@@ -1,9 +1,4 @@
 <!--Formulario de registro de producto-->
-<div class="btn-group p-4" role="group">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registro"><i
-            class="fa-solid fa-square-up-right"></i> Insertar</button>
-</div>
-
 <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -23,7 +18,8 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label alt="codigo">Código del producto</label>
-                                        <input class="form-control" id="exampleInputEmail1" placeholder="Codigo del producto">
+                                        <textarea [(ngModel)]="Producto.codigo_producto" type="text" class="form-control" rows="1" placeholder="Codigo del producto" name="Código del producto"></textarea>
+
                                     </div>
                                 </div>
                             </div>
@@ -32,8 +28,8 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label alt="nombredelproducto">Nombre del producto</label>
-                                        <input class="form-control" id="exampleInputPassword1"
-                                            placeholder="Ingrese Nombre del producto">
+                                        <textarea [(ngModel)]="Producto.nombre_producto" type="text" class="form-control" rows="1" placeholder="Nombre del producto" name="Nombre del producto"></textarea>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +41,8 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Modelo</label>
-                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el modelo">
+                                        <textarea [(ngModel)]="Producto.modelo" type="text" class="form-control" rows="1" placeholder="Modelo" name="Modelo"></textarea>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -53,9 +50,8 @@
                                 <div class="form-group" >
                                     <div class="form-group" >
                                         <label >Marcas</label>
-                                        <select class="custom-select form-control-border" id="exampleSelectBorder" >
-                                            <option *ngFor="let ListaMarca of ListaMarca" >{{ListaMarca.nombre}}</option>
-                                            
+                                        <select #comboBox1 class="custom-select form-control-border" (change)="obtenerMarca(comboBox1.value)" >
+                                            <option *ngFor="let ListaMarca of ListaMarca" value="{{ListaMarca.id_Marca}}" >{{ListaMarca.nombre}}</option>                
                                         </select>
                                         
                                     </div>
@@ -68,10 +64,10 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Tipo de persona</label>
-                                        <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                            <option>Hombre</option>
-                                            <option>Mujer</option>
-                                            <option>Niño</option>
+                                        <select #comboBox2 class="custom-select form-control-border" (change)="obtenercGenero(comboBox2.value)">
+                                            <option value="Hombre" >Hombre</option>
+                                            <option value="Mujer">Mujer</option>
+                                            <option value="Niño">Niño</option>
                                         </select>
                                     </div>
                                 </div>
@@ -79,7 +75,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label >Talla</label>
-                                    <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese talla">
+                                    <textarea [(ngModel)]="Producto.talla" type="text" class="form-control" rows="1" placeholder="Talla" name="Talla"></textarea>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -88,14 +85,15 @@
                 
                         <div class="form-group">
                             <label >Categoría</label>
-                            <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                <option alt="cargarcategoria">Botines</option>
+                            <select #comboBox3 class="custom-select form-control-border" (change)="obtenercategoria(comboBox3.value)">
+                                <option alt="cargarcategoria" *ngFor="let ListaCategoria of ListaCategoria" value="{{ListaCategoria.pk_nombre_cat}}">{{ListaCategoria.pk_nombre_cat}}</option>
                             </select>
                         </div>
+                        
                 
                         <div class="form-group">
                             <label>Descripción del producto</label>
-                            <textarea class="form-control" rows="3" placeholder="Descripcion"></textarea>
+                            <textarea [(ngModel)]="Producto.descripcion" type="text" class="form-control" rows="3" placeholder="Descripción del producto" name="Descripción del producto"></textarea>
                         </div>
                 
                         <div class="row">
@@ -104,7 +102,8 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Costo</label>
-                                        <input class="form-control" id="exampleInputPassword1" placeholder="Ingrese el costo">
+                                        <textarea [(ngModel)]="Producto.costo" type="text" class="form-control" rows="1" placeholder="Costo" name="Costo"></textarea>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -119,14 +118,14 @@
                                         
                         <div class="form-group">
                             <label >Cargar Imagen</label>
-                            <input class="form-control" id="exampleInputPassword1" placeholder="Cargar imagen">
+                            <textarea [(ngModel)]="Producto.img" type="text" class="form-control" rows="3" placeholder="Cargar imagen" name="Nombre de la marca"></textarea>
                         </div>
                 
                     </div>
                 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-success">Registrar</button>
+                        <button (click)="agregarProducto()" type="button" class="btn btn-success">Registrar</button>
                     </div>
                 </form>
             </div>

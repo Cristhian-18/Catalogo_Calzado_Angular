@@ -47,7 +47,7 @@ export interface Producto{
   img:string; 
   nombre_producto:string; 
   descripcion:string; 
-  fk_marca:string; 
+  fk_marca:number; 
   modelo:string;
   genero:string; 
   talla:string; 
