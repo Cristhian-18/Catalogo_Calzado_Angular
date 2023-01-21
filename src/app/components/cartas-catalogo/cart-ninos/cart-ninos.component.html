@@ -12,26 +12,26 @@
                     </div>
                 </div>
             </header>
-            <div class="my-5">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6" >
-                        <div class="item text-center">
-                            <div class="card shadow-sm bg-image ">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fhombres%2Fadidas%2Fadi_2%20Colors%20Available_12.jpg?alt=media&token=7453b096-093d-43f7-a87c-2f33b9c7f4bc"
+            <div class="my-5" >
+                <div  class="row"  >
+                    <div  class="col-lg-3 col-md-4 col-sm-6" *ngFor="let ListaProducto of ListaNino">
+                        <div  class="item text-center"  >
+                            <div class="card shadow-sm bg-image" >
+                                <img src="{{ListaProducto.img}}"
                                     class="img-fluid">
                                 <div class="card-body">
                                     <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
                                             class="wishlist"><i class="fa fa-heart"></i></a>
                                         <ul class="list-unstyled mb-0">
-                                            <button (click)="abrirmodal()" type="button" class="btn btn-primary btn-lg px-4 mb-2"
-                                                data-toggle="modal" data-target="#modal1">Detalles</button>
+                                            <button (click)="abrirmodal()"  type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                    data-toggle="modal" data-target="#modal1" (click)="getNombres(ListaProducto.pk_id_producto)">Detalles</button>
                                         </ul>
                                     </div>
                                     <div class="card-title">
-                                        <p class="generoproducto">niños</p>
-                                        <h4 class="nombreproducto">Vans Old School</h4>
+                                        <p class="generoproducto">{{ListaProducto.genero}}</p>
+                                        <h4 class="nombreproducto">{{ListaProducto.nombre_producto}}</h4>
                                         <ul class="price list-inline">
-                                            <li class="list-inline-item">$ <span class="price">40</span></li>
+                                            <li class="list-inline-item"> <span class="price">$ {{ListaProducto.costo}}</span></li>
                                         </ul>
                                     </div>
                                 </div>

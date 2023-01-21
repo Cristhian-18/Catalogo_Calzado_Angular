@@ -13,107 +13,26 @@
                 </div>
             </header>
 
-            <div class="my-5">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item text-center">
-                            <div class="card shadow-sm bg-image ">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fmujeres%2Fadidas%2FTENIS%20DE%20SENDERISMO%20TERREX%20AX4%20PRIMEGREEN_5.jpg?alt=media&token=afe8c0b0-0e3a-4f3e-af9a-3027c09b5717"
+            <div class="my-5" >
+                <div  class="row"  >
+                    <div  class="col-lg-3 col-md-4 col-sm-6" *ngFor="let ListaProducto of ListaMujeres">
+                        <div  class="item text-center"  >
+                            <div class="card shadow-sm bg-image" >
+                                <img src="{{ListaProducto.img}}"
                                     class="img-fluid">
                                 <div class="card-body">
                                     <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
                                             class="wishlist"><i class="fa fa-heart"></i></a>
                                         <ul class="list-unstyled mb-0">
-                                            <button (click)="abrirmodal()" type="button"
-                                                class="btn btn-primary btn-lg px-4 mb-2" data-toggle="modal"
-                                                data-target="#modal1">Detalles</button>
+                                            <button (click)="abrirmodal()"  type="button" class="btn btn-primary btn-lg px-4 mb-2"
+                                                    data-toggle="modal" data-target="#modal1" (click)="getNombres(ListaProducto.pk_id_producto)">Detalles</button>
                                         </ul>
                                     </div>
                                     <div class="card-title">
-                                        <p class="generoproducto">Mujeres</p>
-                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
-
+                                        <p class="generoproducto">{{ListaProducto.genero}}</p>
+                                        <h4 class="nombreproducto">{{ListaProducto.nombre_producto}}</h4>
                                         <ul class="price list-inline">
-                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item text-center">
-                            <div class="card shadow-sm bg-image ">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fmujeres%2Fadidas%2FTENIS%20ULTRABOOST%20DNA%20XXII%20LIFESTYLE%20RUNNING%20SPORTSWEAR%20CAPSULE%20COLLECTION_11.jpg?alt=media&token=7c2c8b20-b627-4a4d-89d1-e0a29f017fbe"
-                                    class="img-fluid">
-                                <div class="card-body">
-                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
-                                            class="wishlist"><i class="fa fa-heart"></i></a>
-                                        <ul class="list-unstyled mb-0">
-                                            <button (click)="abrirmodal()" type="button"
-                                                class="btn btn-primary btn-lg px-4 mb-2" data-toggle="modal"
-                                                data-target="#modal1">Detalles</button>
-                                        </ul>
-                                    </div>
-                                    <div class="card-title">
-                                        <p class="generoproducto">Mujeres</p>
-                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
-                                        <ul class="price list-inline">
-                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item text-center">
-                            <div class="card shadow-sm bg-image ">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fmujeres%2Fnike%2FNIKE%20MX%20720-818%20-%20Nr1.jpg?alt=media&token=9fafff6f-2b8a-4149-9dc5-d7a474bb7643"
-                                    class="img-fluid">
-                                <div class="card-body">
-                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
-                                            class="wishlist"><i class="fa fa-heart"></i></a>
-                                        <ul class="list-unstyled mb-0">
-                                            <button (click)="abrirmodal()" type="button"
-                                                class="btn btn-primary btn-lg px-4 mb-2" data-toggle="modal"
-                                                data-target="#modal1">Detalles</button>
-                                        </ul>
-                                    </div>
-                                    <div class="card-title">
-                                        <p class="generoproducto">Mujeres</p>
-                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
-
-                                        <ul class="price list-inline">
-                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item text-center">
-                            <div class="card shadow-sm bg-image ">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/proyectcatalogozapatos.appspot.com/o/Imagenes%2FCatalogo%2Fmujeres%2Fnike%2FNIKE%20TANJUN%20-%20Nr3.jpg?alt=media&token=d264efb9-27fb-4bfd-b169-1e1fba93e46f"
-                                    class="img-fluid">
-                                <div class="card-body">
-                                    <div class="overlay p-0 d-flex align-items-center justify-content-center"><a
-                                            class="wishlist"><i class="fa fa-heart"></i></a>
-                                        <ul class="list-unstyled mb-0">
-                                            <button (click)="abrirmodal()" type="button"
-                                                class="btn btn-primary btn-lg px-4 mb-2" data-toggle="modal"
-                                                data-target="#modal1">Detalles</button>
-                                        </ul>
-                                    </div>
-                                    <div class="card-title">
-                                        <p class="generoproducto">Mujeres</p>
-                                        <h4 class="nombreproducto">Nike Phantom GT2</h4>
-                                        <ul class="price list-inline">
-                                            <li class="list-inline-item"> <span class="price">$1,299</span></li>
+                                            <li class="list-inline-item"> <span class="price">$ {{ListaProducto.costo}}</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -126,7 +45,6 @@
         </div>
     </section>
 </div>
-
 
 <!--Logica de abrir modal de informacion del producto-->
 <div *ngIf="info_modal==true">

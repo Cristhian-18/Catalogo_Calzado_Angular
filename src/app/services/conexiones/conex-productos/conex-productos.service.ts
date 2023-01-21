@@ -39,6 +39,7 @@ export class ConexProductosService {
     return this.http.put(this.url+'/'+id,producto);
 
   };
+  
 }
 console.log("Servicio en Uso PRODUCTO");
 export interface Producto{
