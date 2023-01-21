@@ -33,7 +33,7 @@ export class CartNinosComponent implements OnInit {
       res=>{
         console.log(res)
         this.ListaProducto=<any>res;
-        this.ListaNino = this.ListaProducto.filter(item =>item.genero=='Niño')          
+        this.ListaNino = this.ListaProducto.filter(item =>item.genero=='Niños')          
       },
       err => console.log(err)
       
