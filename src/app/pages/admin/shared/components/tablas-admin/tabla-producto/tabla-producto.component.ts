@@ -13,6 +13,7 @@ export class TablaProductoComponent implements OnInit {
 
   ListaProducto:Producto[]=[];
   index:number=0;
+  index2:number=0;
   constructor(private ConexProdcutoService:ConexProductosService) { }
 
   ngOnInit(): void {
@@ -64,7 +65,12 @@ export class TablaProductoComponent implements OnInit {
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante2)
   }
   enviar(){
-    this.getIndex(this.ListaProducto.length+1);
+    
+    for(let i=0;i<this.ListaProducto.length;i++){
+      this.index2 = this.ListaProducto[i].pk_id_producto+1;
+    }
+    console.log(this.index2);
+    this.getIndex(this.index2);
   }
 
 }
