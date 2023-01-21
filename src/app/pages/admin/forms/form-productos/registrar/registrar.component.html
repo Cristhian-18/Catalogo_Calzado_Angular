@@ -11,7 +11,7 @@
             <!--Formulario para registrar : producto--->
             <div class="modal-body">
                 <form>
-                    <div class="card-body">
+                    <div class="card-body" class="font-weight-bold">
                         <div class="row">
                             <div class="col-sm-6">
                                 <!-- text input -->
@@ -19,7 +19,6 @@
                                     <div class="form-group">
                                         <label alt="codigo">Código del producto</label>
                                         <textarea [(ngModel)]="Producto.codigo_producto" type="text" class="form-control" rows="1" placeholder="Codigo del producto" name="Código del producto"></textarea>
-
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +39,7 @@
                                 <!-- textarea -->
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label >Modelo</label>
+                                        <label alt="modelo">Modelo</label>
                                         <textarea [(ngModel)]="Producto.modelo" type="text" class="form-control" rows="1" placeholder="Modelo" name="Modelo"></textarea>
                                         
                                     </div>
@@ -49,7 +48,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group" >
                                     <div class="form-group" >
-                                        <label >Marcas</label>
+                                        <label alt="marcasproducto" class="font-weight-bold">Marcas</label>
                                         <select #comboBox1 class="custom-select form-control-border" (change)="obtenerMarca(comboBox1.value)" >
                                             <option *ngFor="let ListaMarca of ListaMarca" value="{{ListaMarca.id_Marca}}" >{{ListaMarca.nombre}}</option>                
                                         </select>

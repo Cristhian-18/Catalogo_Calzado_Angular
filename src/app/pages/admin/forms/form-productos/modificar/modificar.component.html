@@ -18,7 +18,7 @@
                                 <div class="form-group">                                    
                                     <div class="form-group">
                                         <label alt="codigo">Código del producto</label>
-                                        <textarea class="form-control" rows="1" placeholder="Código del producto">{{detalle.pk_id_producto}}</textarea>
+                                        <input class="form-control" rows="1" placeholder={{detalle.pk_id_producto}}>
                                         <!--
                                         <input [(ngModel)]="detalle.nombre" type="text" class="form-control" name="Código del producto" placeholder={{detalle.pk_id_producto}} > 
                                         -->
@@ -31,7 +31,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label alt="nombredelproducto">Nombre del producto</label>
-                                        <textarea class="form-control" rows="1" placeholder="Nombre del producto">{{detalle.nombre_producto}}</textarea>
+                                        <input [(ngModel)]="detalle.nombre_producto" type="text" class="form-control" name="Nombre del producto" placeholder={{detalle.nombre}}> 
                                          <!--
                                         <input class="form-control" id="exampleInputPassword1"
                                             placeholder={{detalle.nombre_producto}}>
@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Modelo</label>
-                                        <textarea class="form-control" rows="1" placeholder="Modelo">{{detalle.modelo}}</textarea>
+                                        <input [(ngModel)]="detalle.modelo" type="text" class="form-control" name="Modelo" placeholder={{detalle.modelo}}> 
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +87,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                      <!---Entrada de datos de la talla--->
-                                    <label >Talla</label>                                   
-                                    <textarea class="form-control" rows="1" placeholder="Modelo">{{detalle.talla}}</textarea>
+                                    <label >Talla</label>   
+                                    <input [(ngModel)]="detalle.talla" type="text" class="form-control" name="Talla" placeholder={{detalle.talla}}> 
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Costo</label>
-                                        <textarea class="form-control" rows="1" placeholder="Costo">{{detalle.costo}}</textarea>
+                                        <input [(ngModel)]="detalle.costo" type="text" class="form-control" name="Costo" placeholder={{detalle.costo}}> 
                                     </div>
                                 </div>
                             </div>

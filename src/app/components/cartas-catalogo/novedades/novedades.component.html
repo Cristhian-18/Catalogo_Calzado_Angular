@@ -10,9 +10,9 @@
     <section class="products p-t-small">
         <div class="container">
             <div class="my-5">
-                <div class="row">
-                    <div *ngFor="let ListaProducto of ListaProducto" class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item text-center">
+                <div class="row ">
+                    <div class="col-lg-3 col-md-4 col-sm-3" *ngFor="let ListaProducto of ListaProducto" >
+                        <div class="item text-center ">
                             <div class="card shadow-sm bg-image">
                                 <img src="{{ListaProducto.img}}" class="img-fluid">
                                 <div class="card-body">
@@ -39,8 +39,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </section>
 </div>
