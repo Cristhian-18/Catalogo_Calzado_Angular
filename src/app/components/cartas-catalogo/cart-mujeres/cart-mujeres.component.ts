@@ -13,6 +13,7 @@ export class CartMujeresComponent implements OnInit {
   info_modal:boolean=false;
 
   ListaProducto:Producto[]=[];
+  ListaMujeres:Producto[]=[];
 
   constructor(private canexproduc:ConexProductosService) { }
 
@@ -34,6 +35,7 @@ export class CartMujeresComponent implements OnInit {
     res=>{
       console.log(res)
       this.ListaProducto=<any>res;
+      this.ListaMujeres = this.ListaProducto.filter(item =>item.genero=='Mujer')   
            
     },
     err => console.log(err)

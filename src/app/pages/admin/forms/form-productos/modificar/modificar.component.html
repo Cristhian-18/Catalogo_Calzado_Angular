@@ -59,8 +59,12 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label >Marcas</label>
-                                        <select class="custom-select form-control-border" id="exampleSelectBorder">
-                                            <option *ngFor="let ListaMarca of ListaMarca" >{{detalle.fk_marca}}</option>
+                                        <select #comboBox1 class="custom-select form-control-border" id="exampleSelectBorder" >
+                                            <option *ngFor="let ListaMarca of ListaMarca" value="{{ListaMarca.id_Marca}}" >{{ListaMarca.nombre}}</option>
+                                            <script comboBox1.[selectedIndex]="detalle.fk_marca" ></script>
+                                            <!--
+                                                <option *ngFor="let ListaMarca of ListaMarca" placeholder=detalle.fk_marca >{{detalle.fk_marca}}</option>
+                                            -->                                                    
                                         </select>
                                     </div>
                                 </div>
@@ -75,6 +79,7 @@
                                     <div class="form-group">
                                         <label >Tipo de persona</label>
                                         <select class="custom-select form-control-border" id="exampleSelectBorder">
+                                            <option>{{detalle.genero}}</option>
                                             <option>Hombre</option>
                                             <option>Mujer</option>
                                             <option>Niño</option>

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ConexProductosService,Producto } from 'src/app/services/conexiones/conex-productos/conex-productos.service';
 
 @Component({
@@ -14,13 +13,18 @@ export class CartHombreComponent implements OnInit {
   info_modal:boolean=false;
 
   ListaProducto:Producto[]=[];
+  ListaHombe:Producto[]=[];
 
   constructor(private canexproduc:ConexProductosService) { }
 
   ngOnInit(){
    
     this.listarProductos();
+   
+   
   }
+
+ 
 
   getNombres(nombre:number){
     this.dataEntrante = nombre;
@@ -28,14 +32,14 @@ export class CartHombreComponent implements OnInit {
     this.canexproduc.disparadorDetalle.emit(this.dataEntrante)
   }
 
-  listarProductos()
+listarProductos()
 {
   console.log("Servicio ULTIMA NOVEDAD");
   this.canexproduc.getProdcuto().subscribe(
     res=>{
       console.log(res)
       this.ListaProducto=<any>res;
-           
+      this.ListaHombe = this.ListaProducto.filter(item =>item.genero=='Hombre')     
     },
     err => console.log(err)
     
@@ -43,8 +47,6 @@ export class CartHombreComponent implements OnInit {
 
   
 }
-
-
   abrirmodal(){
   this.info_modal = true;
 }

@@ -68,4 +68,16 @@ export class ModificarComponent implements OnInit {
   );
   } 
 
+
+/*
+  selectProductBy(id:number){
+    for (let i = 0; i < #comboBox1.; i++) {
+      if (this.ListaMarca[i].id_Marca == id) {
+        this.ListaMarca.selectedIndex = i;
+        break;
+      }
+    }
+  }*/
+
+
 }
