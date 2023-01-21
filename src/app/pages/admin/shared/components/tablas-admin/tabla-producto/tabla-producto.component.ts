@@ -28,7 +28,7 @@ export class TablaProductoComponent implements OnInit {
       
       console.log(res)
       this.ListaProducto=<any>res;
-      console.log("Servicio ULTIMA A");
+      console.log("Servicio ULTIMA AA");
     },
     err => console.log(err)
     

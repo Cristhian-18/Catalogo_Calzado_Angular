@@ -13,7 +13,8 @@ export class TablaMarcaComponent implements OnInit {
   @Input() dataEntrante2:any;
   ListaMarca:Marca[]=[];
   index:number=0;
-  
+  index2:number=0;
+
   constructor(private ConexProdcutoService:ConexMarcaService) { }
   ngOnInit(): void {
     this.listarMarcas();
@@ -55,6 +56,11 @@ export class TablaMarcaComponent implements OnInit {
     this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante2)
   }
   enviar(){
-    this.getIndex(this.ListaMarca.length+1);
+    
+    for(let i=0;i<this.ListaMarca.length;i++){
+      this.index2 = this.ListaMarca[i].id_Marca+1;
+    }
+    console.log(this.index2);
+    this.getIndex(this.index2);
   }
 }

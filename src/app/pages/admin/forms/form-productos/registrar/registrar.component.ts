@@ -35,6 +35,7 @@ export class RegistrarComponent implements OnInit {
 
     this.ConexProdcutoService.disparadorDetalle.subscribe(data=>{
       this.detalle = data;
+      this.Producto.oferta = 'No Oferta';
   })
 
 
@@ -89,6 +90,7 @@ export class RegistrarComponent implements OnInit {
   }
   
   obtenerOferta(valor: boolean) {
+    
     if(valor == true){
       this.Producto.oferta = 'Oferta';
       console.log('Oferta');

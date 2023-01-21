@@ -12,6 +12,7 @@ export class TablaCategoriaComponent implements OnInit {
   @Input() dataEntrante2:any;
   index:number=0;
   ListaCategoria:categoria[]=[];
+  index2:number=0;
 
   constructor(private Conexcategoria:ConexCategoriaService) { }
   ngOnInit(): void {
@@ -54,6 +55,11 @@ export class TablaCategoriaComponent implements OnInit {
     this.Conexcategoria.disparadorDetalle.emit(this.dataEntrante2)
   }
   enviar(){
-    this.getIndex(this.ListaCategoria.length+1);
+    
+    for(let i=0;i<this.ListaCategoria.length;i++){
+      this.index2 = this.ListaCategoria[i].id_categoria+1;
+    }
+    console.log(this.index2);
+    this.getIndex(this.index2);
   }
 }
