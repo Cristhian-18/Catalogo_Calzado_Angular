@@ -35,6 +35,7 @@ import { ConexProductosService } from './services/conexiones/conex-productos/con
 import { HttpClientModule } from '@angular/common/http';
 import { ConexCategoriaService } from './services/conexiones/conex-categoria/conex-categoria.service';
 
+
 import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.component';
 import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
 import { FormCategoriaComponent } from './pages/admin/forms/form-categoria/form-categoria.component';
@@ -53,10 +54,7 @@ import { ModificarCategoriaComponent } from './pages/admin/forms/form-categoria/
 import { TablaCategoriaComponent } from './pages/admin/shared/components/tablas-admin/tabla-categoria/tabla-categoria.component';
 import { TablaUsuariosComponent } from './pages/admin/shared/components/tablas-admin/tabla-usuarios/tabla-usuarios.component';
 import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-usuarios.component';
-
-
-
-
+import { GaleriaComponent } from './components/galeria/galeria.component';
 
 
 @NgModule({
@@ -98,6 +96,7 @@ import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-us
     TablaCategoriaComponent,
     TablaUsuariosComponent,
     FormUsuariosComponent,
+    GaleriaComponent,
 
 
   ],

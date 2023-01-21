@@ -26,6 +26,8 @@ const routes: Routes = [
   {path:'mujeres', component:MujeresComponent},
   {path:'ninos', component:NinosComponent},
   
+
+  
   //Administrador//
   {path:'admin', component:AdminComponent},
   {path:'admin/form-inicio', component:FormInicioComponent},

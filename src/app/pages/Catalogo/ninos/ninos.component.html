@@ -1,30 +1,3 @@
-<!------------------------------------------------------
------------------------Titulo --------------------------
--------------------------------------------------------->
-<br>
-<hr>
-<div class="bg-2">
-    <h1 class="t-stroke-shadow fs-1 fw-bolder text-center">Ultimas novedades de ASTROSHOES</h1>
-</div>
-
-<!-- SECCION DE CARTA PARA LOS PRODUCTOS -->
-<main>
-    <div class="container" id="contenedor1">
-        <p></p>
-        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col" *ngFor="let ListaProducto of ListaMarca">
-                <div class="card shadow-sm">
-                    <img src="">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text">{{ListaProducto.id_Marca}}</p>
-                        <p class="card-text">$ {{ListaProducto.nombre}}</p>
-                        <div class="btn-group">
-                            <a href="" class=" btn btn-primary">{{ListaProducto.descripcion}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>>
-</main>
+<app-navbar></app-navbar>
+<app-cart-ninos></app-cart-ninos>
+<app-footer></app-footer>
