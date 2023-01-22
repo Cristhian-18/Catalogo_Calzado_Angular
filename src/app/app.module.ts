@@ -27,9 +27,6 @@ import { CartMujeresComponent } from './components/cartas-catalogo/cart-mujeres/
 import { CartNinosComponent } from './components/cartas-catalogo/cart-ninos/cart-ninos.component';
 
 //servicios//
-import { ServicioHombreService } from './services/servicio_hombre/servicio-hombre.service';
-import { ServicioMujerService } from './services/servicio_mujer/servicio-mujer.service';
-import { ServicioUltimosmodelosService } from './services/servicio_ultimosmodelos/servicio-ultimosmodelos.service';
 import { ConexMarcaService } from './services/conexiones/conex-marca/conex-marca.service';
 import { ConexProductosService } from './services/conexiones/conex-productos/conex-productos.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -55,6 +52,7 @@ import { TablaCategoriaComponent } from './pages/admin/shared/components/tablas-
 import { TablaUsuariosComponent } from './pages/admin/shared/components/tablas-admin/tabla-usuarios/tabla-usuarios.component';
 import { FormUsuariosComponent } from './pages/admin/forms/form-usuarios/form-usuarios.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 @NgModule({
@@ -97,6 +95,7 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
     TablaUsuariosComponent,
     FormUsuariosComponent,
     GaleriaComponent,
+    SpinnerComponent,
 
 
   ],
@@ -107,9 +106,6 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
     FormsModule
   ],
   providers: [
-    ServicioHombreService,
-    ServicioMujerService,
-    ServicioUltimosmodelosService,
     ConexMarcaService,
     ConexProductosService,
     ConexCategoriaService

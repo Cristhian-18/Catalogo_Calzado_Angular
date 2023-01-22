@@ -15,7 +15,7 @@
 
             <div class="my-5" >
                 <div  class="row"  >
-                    <div  class="col-lg-3 col-md-4 col-sm-6" *ngFor="let ListaProducto of ListaHombe">
+                    <div  class="col-lg-3 col-md-4 col-6" *ngFor="let ListaProducto of ListaHombe">
                         <div class="item text-center"  >
                             <div class="card shadow-sm bg-image" >
                                 <img src="{{ListaProducto.img}}"
@@ -47,6 +47,7 @@
 </div>
 
 <!--Logica de abrir modal de informacion del producto-->
+
 <div *ngIf="info_modal==true">
     <app-info-modals></app-info-modals>
 </div>

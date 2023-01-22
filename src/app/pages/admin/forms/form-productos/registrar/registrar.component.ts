@@ -37,16 +37,13 @@ export class RegistrarComponent implements OnInit {
       this.detalle = data;
   })
 
-
    }
 
   ngOnInit(): void {
     this.listarMarcas();
-    this.listaCategoria();
-    
+    this.listaCategoria();   
   }
   
-
   listaCategoria()
   {
   console.log("Servicio ULTIMA NOVEDAD");
@@ -71,7 +68,6 @@ export class RegistrarComponent implements OnInit {
     err => console.log(err)
     
   );
-
   } 
 
   obtenercategoria(valor: string) {
@@ -97,7 +93,6 @@ export class RegistrarComponent implements OnInit {
       console.log('No Oferta');
     }
   }
-
 
   agregarProducto(){
     this.Producto.pk_id_producto = (this.detalle)

@@ -3,14 +3,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modificación de producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="modal-title" id="exampleModalLabel">Modificación de producto</h3>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!--Formulario para modificar : producto--->
             <div class="modal-body">
                 <form *ngFor="let detalle of cargar" >
                     <!----Cuerpo de la carta--->
-                    <div class="card-body">
+                    <div class="card-body font-weight-bold">
                         <div class="row">
                             <!----Codigo del producto---->
                             <div class="col-sm-6">
@@ -118,27 +118,27 @@
                                 <!-- Entrada de texto del costo -->
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label >Costo</label>
+                                        <i class="fa-solid fa-dollar-sign"></i><label>_Costo Unitario</label>
                                         <input [(ngModel)]="detalle.costo" type="text" class="form-control" name="Costo" placeholder={{detalle.costo}}> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <!----Boton o check para ver si hay ofertas o no---->
+                                <div class="form-group">
+                                    <label>Seleccionar</label>
+                                    <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                        <input type="checkbox" class="custom-control-input" id="switchoferta">
+                                        <label class="custom-control-label" for="switchoferta">Oferta</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!----Boton o check para ver si hay ofertas o no---->
-                        <div class="form-group">
-                            <label >Seleccionar</label>
-                            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                                <input type="checkbox" class="custom-control-input" id="switchoferta">
-                                <label class="custom-control-label" for="switchoferta">Oferta</label>
-                            </div>
-                        </div>
-                        
                         <!-----Cargar imagen desde FIREBASE---->
                         <div class="form-group">
                             <label >Cargar Imagen</label>
-                            <textarea class="form-control" rows="1" placeholder="Cargar Imagen">{{detalle.img}}</textarea>
-                            
+                            <textarea class="form-control" rows="1" placeholder="Cargar Imagen">{{detalle.img}}</textarea>                           
                         </div>               
                     </div> <!----Fin del cuerpo de la carta-->
                     

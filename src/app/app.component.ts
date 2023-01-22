@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Catalogo_Calzado';
 
+  public load: Boolean  = false;
 
-  
+  ngOnInit(): void{
+    setTimeout(() => {
+      this.load = true;
+    }, 1000);
+  }
 }
 
 

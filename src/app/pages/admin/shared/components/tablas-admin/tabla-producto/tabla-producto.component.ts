@@ -34,13 +34,7 @@ export class TablaProductoComponent implements OnInit {
   );
   
   } 
-  /*
-  getIndex(id:number){
-    this.dataEntrante = id;
-    console.log("ID: ",id);
-    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
-  }
-  */
+
   eliminar(id:number){
     console.log(id);
     this.ConexProdcutoService.deletproducto(id).subscribe(
@@ -66,5 +60,4 @@ export class TablaProductoComponent implements OnInit {
   enviar(){
     this.getIndex(this.ListaProducto.length+1);
   }
-
 }

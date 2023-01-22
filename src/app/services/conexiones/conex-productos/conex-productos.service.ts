@@ -56,12 +56,4 @@ export interface Producto{
   oferta:string;
   fk_nombre_categoria:string;
 };
-export interface administracion{
-  pk_id_administrador:number;
-  cedula:string; 
-  nombre_admin:string; 
-  apellido_admin:string; 
-  usuario:string; 
-  contrasena:string; 
-  email:string; 
-};
+
