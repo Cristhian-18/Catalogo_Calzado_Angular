@@ -2,12 +2,8 @@
 
 <div class="filters d-flex justify-content-end">
     <select title="Brandd" name="brand" class="form-control">
-        <option value="">Marca: Nike</option>
-        <option value="">Marca: Adidas</option>
-        <option value="">Marca: Jordan</option>
-        <option value="">Marca: Vans</option>
-        <option value="">Marca: New Balance</option>
-        <option value="">Marca: Puma</option>
+        <option *ngFor="let ListaMarca of ListaMarca; let i= index" value="{{ListaMarca.id_Marca}}">Marca: {{ListaMarca.nombre}}</option>
+        
     </select>
     <select title="Tallas" name="tallas" class="form-control">
         <option value="">Talla: 37</option>
