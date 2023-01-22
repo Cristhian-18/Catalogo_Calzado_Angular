@@ -11,6 +11,7 @@ export class CartHombreComponent implements OnInit {
   @Input() dataEntrante:any;
 
   info_modal:boolean=false;
+  public load: Boolean  = false;
 
   ListaProducto:Producto[]=[];
   ListaHombe:Producto[]=[];
@@ -18,10 +19,11 @@ export class CartHombreComponent implements OnInit {
   constructor(private canexproduc:ConexProductosService) { }
 
   ngOnInit(){
-   
     this.listarProductos();
-   
-   
+
+    setTimeout(() => {
+      this.load = true;
+    }, 1000); 
   }
 
  

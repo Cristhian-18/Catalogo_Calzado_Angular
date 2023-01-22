@@ -21,7 +21,7 @@ export class TablaProductoComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  /*
+  
   listarProductos()
 {
   console.log("Servicio PRODUCTOS TABLAS");
@@ -37,24 +37,6 @@ export class TablaProductoComponent implements OnInit {
   );
   
   } 
-  */
-  
-  listarProductos() {
-    console.log("Servicio PRODUCTOS TABLAS");
-    this.ConexProdcutoService.getProdcuto().subscribe(
-      (res: any) => {
-        if (res.length == 0) {
-          this.ListaProducto = [];
-          console.log("No hay datos disponibles");
-        } else {
-          this.ListaProducto = res;
-          console.log("Servicio ULTIMA AA");
-        }
-      },
-      err => console.log(err)
-    );
-  }
-
   eliminar(id:number){
     console.log(id);
     this.ConexProdcutoService.deletproducto(id).subscribe(
@@ -85,5 +67,4 @@ export class TablaProductoComponent implements OnInit {
     console.log(this.index2);
     this.getIndex(this.index2);
   }
-
 }
