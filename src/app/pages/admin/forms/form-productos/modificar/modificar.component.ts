@@ -40,7 +40,7 @@ export class ModificarComponent implements OnInit {
     this.ConexProdcutoService.disparadorDetalle.subscribe(data=>{
       this.ConexProdcutoService.getUnProducto(data).subscribe(
        res=>{
-         console.log(res)         
+               
          this.cargar=<any>res;               
        },
        err => console.log('Hola')
@@ -54,30 +54,26 @@ export class ModificarComponent implements OnInit {
   ngOnInit(): void {
     this.listarMarcas();
   }
-
+  /*
   listarMarcas()
   {
-  console.log("Servicio ULTIMA NOVEDAD");
+  console.log("Servicio Componente Modificar");
   this.ConexMarca.getMarcas().subscribe(
     res=>{
-      console.log(res)
+     
       this.ListaMarca=<any>res;
            
     },
     err => console.log(err)  
   );
-  } 
-
-
-/*
-  selectProductBy(id:number){
-    for (let i = 0; i < #comboBox1.; i++) {
-      if (this.ListaMarca[i].id_Marca == id) {
-        this.ListaMarca.selectedIndex = i;
-        break;
-      }
+  } */
+  async listarMarcas() {
+    console.log("Servicio Modificar PRODUCTOS TABLAS");
+    try {
+      const response =  await this.ConexProdcutoService.getProdcuto().subscribe();
+      this.ListaMarca = <any> response;
+    } catch (error) {
+      console.log(error);
     }
-  }*/
-
-
+  }
 }

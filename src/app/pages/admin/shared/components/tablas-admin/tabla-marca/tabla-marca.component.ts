@@ -15,24 +15,27 @@ export class TablaMarcaComponent implements OnInit {
   index:number=0;
   index2:number=0;
 
-  constructor(private ConexProdcutoService:ConexMarcaService) { }
+  constructor(private ConexProdcutoService:ConexMarcaService) { this.listarMarcas();}
   ngOnInit(): void {
-    this.listarMarcas();
+    
   }
   listarMarcas()
-{
-  console.log("Servicio ULTIMA NOVEDAD");
-  this.ConexProdcutoService.getMarcas().subscribe(
-    res=>{
-      console.log(res)
-      this.ListaMarca=<any>res;
-           
-    },
-    err => console.log(err)
-    
-  );
-
-  } 
+  {
+    console.log("Servicio ULTIMA NOVEDAD");
+      this.ConexProdcutoService.getMarcas().subscribe(
+        (res: any) => {
+          
+          if (res.length === 0) {
+            this.ListaMarca = [];
+            console.log("No hay datos disponibles");
+          } else {
+            this.ListaMarca = res;
+            console.log("Servicio ULTIMA AA");
+          }
+        },
+        err => console.log(err)
+      );
+    } 
 
   eliminar(id:number){
     this.ConexProdcutoService.deletemarca(id).subscribe(

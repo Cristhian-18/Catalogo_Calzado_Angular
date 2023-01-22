@@ -14,12 +14,14 @@ export class TablaProductoComponent implements OnInit {
   ListaProducto:Producto[]=[];
   index:number=0;
   index2:number=0;
-  constructor(private ConexProdcutoService:ConexProductosService) { }
+  constructor(private ConexProdcutoService:ConexProductosService) {
+    this.listarProductos();
+   }
 
   ngOnInit(): void {
-    this.listarProductos();
+    
   }
-  
+  /*
   listarProductos()
 {
   console.log("Servicio PRODUCTOS TABLAS");
@@ -35,13 +37,24 @@ export class TablaProductoComponent implements OnInit {
   );
   
   } 
-  /*
-  getIndex(id:number){
-    this.dataEntrante = id;
-    console.log("ID: ",id);
-    this.ConexProdcutoService.disparadorDetalle.emit(this.dataEntrante)
-  }
   */
+  
+  listarProductos() {
+    console.log("Servicio PRODUCTOS TABLAS");
+    this.ConexProdcutoService.getProdcuto().subscribe(
+      (res: any) => {
+        if (res.length == 0) {
+          this.ListaProducto = [];
+          console.log("No hay datos disponibles");
+        } else {
+          this.ListaProducto = res;
+          console.log("Servicio ULTIMA AA");
+        }
+      },
+      err => console.log(err)
+    );
+  }
+
   eliminar(id:number){
     console.log(id);
     this.ConexProdcutoService.deletproducto(id).subscribe(

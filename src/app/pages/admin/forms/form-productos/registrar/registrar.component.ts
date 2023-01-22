@@ -53,7 +53,7 @@ export class RegistrarComponent implements OnInit {
   console.log("Servicio ULTIMA NOVEDAD");
   this.ConexCategoria.getCategoria().subscribe(
     res=>{
-      console.log(res)
+     // console.log(res)
       this.ListaCategoria=<any>res;         
     },
     err => console.log(err)   
@@ -65,7 +65,7 @@ export class RegistrarComponent implements OnInit {
   console.log("Servicio ULTIMA NOVEDAD");
   this.ConexMarca.getMarcas().subscribe(
     res=>{
-      console.log(res)
+     // console.log(res)
       this.ListaMarca=<any>res;
            
     },
