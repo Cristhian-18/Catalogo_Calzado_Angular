@@ -16,6 +16,10 @@ import { FormMarcaComponent } from './pages/admin/forms/form-marca/form-marca.co
 import { FormProductosComponent } from './pages/admin/forms/form-productos/form-productos.component';
 import { FormInicioComponent } from './pages/admin/forms/form-inicio/form-inicio.component';
 
+/////// LOGIN - REGISTER formularios /////
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+
 
 
 
@@ -25,9 +29,10 @@ const routes: Routes = [
   {path:'hombres', component:HombresComponent},
   {path:'mujeres', component:MujeresComponent},
   {path:'ninos', component:NinosComponent},
+  {path:'login', component:LoginComponent},
+  {path:'register', component:RegisterComponent},
   
 
-  
   //Administrador//
   {path:'admin', component:AdminComponent},
   {path:'admin/form-inicio', component:FormInicioComponent},
